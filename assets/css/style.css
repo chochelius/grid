@@ -1,14 +1,14 @@
 body {
-    display:grid;
+    display: grid;
     grid-auto-flow: dense;
 }
-.grid-container{
-    display: grid; 
-    grid-template-columns: 1fr 4fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". ."; 
-    height:80%;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0px 0px;
+    grid-template-areas: ". .";
+    height: 80%;
     flex-flow: row wrap;
 }
 
@@ -18,7 +18,6 @@ body {
     border: solid 1px black;
     background-color: dimgrey;
     align-items: flex-start;
-
 }
 
 .content {
@@ -26,25 +25,22 @@ body {
     background-color: white;
     display: grid;
     grid-template-columns: auto;
-
-
 }
 
 .card-deck {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". . . ."
-      ". . . ."; 
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . ."
+        ". . . .";
 }
 
 card {
     flex-direction: column;
     flex-wrap: wrap;
-    flex:auto;
+    flex: auto;
 }
 
 .card-deck {
@@ -57,17 +53,18 @@ card {
 
 @media (max-width: 800px) {
     .card-deck {
-        display: grid; 
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          ". ."
-          ". ."; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". ."
+            ". .";
     }
+
     card {
         flex-direction: column;
         flex-wrap: wrap;
-        flex:auto;
+        flex: auto;
     }
-  }
+}
