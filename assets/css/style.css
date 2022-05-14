@@ -53,7 +53,8 @@ card {
 
 @media (max-width: 800px) {
     .card-deck {
-        display: flex
+        display: flex;
+        flex-direction: column; 
     }
 
     card {
