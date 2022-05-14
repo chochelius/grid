@@ -53,17 +53,11 @@ card {
 
 @media (max-width: 800px) {
     .card-deck {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            ". ."
-            ". .";
+        display: flex
     }
 
     card {
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         flex: auto;
     }
