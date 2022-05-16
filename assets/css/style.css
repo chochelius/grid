@@ -136,7 +136,6 @@ display: grid;
 
     .card {
         flex-direction: row;
-        flex-wrap: wrap;
         flex: auto;
     }
 
@@ -144,21 +143,18 @@ display: grid;
         flex-direction: row;
         flex-wrap: wrap;
         flex: auto;  
-        object-fit: scale-down;
-        font-size-adjust: inherit;
     }
 
     .img {
-        height: 10%;
+        height: 8rem;
         width: auto;
         margin-left: 15%;
     }
 
     .content {
         display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto;
-        gap: 10px;
+        grid-template-columns: max-content;
         align-content: center;
+        margin-left: 15%;
     }
 }
