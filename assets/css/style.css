@@ -5,11 +5,21 @@ a {
 
 body {
     background-color: azure;
+    display: grid;
 }
 
-.navbar {
-    display: flexbox;
-    position: relative;
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "head head"
+    "nav  main"
+    "foot foot";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 15% 70% 15%;
+}
+
+.head {
+    grid-area: 'head';
     text-align: center;
     border: solid 1px black;
 }
@@ -23,15 +33,6 @@ body {
     cursor: pointer;
 }
 
-.grid-container {
-    width: auto;
-    display: grid;
-    grid-template-areas:
-        "sidebar card-deck";
-    grid-template-columns: 1fr 6fr;
-
-}
-
 
 .item {
     width: max-content;
@@ -39,51 +40,46 @@ body {
 }
 
 .sidebar {
-    width: 100%;
-    grid-area: 'sidebar';
+    display: flex;
+    grid-area: 'nav';
     border: solid 1px black;
     align-items: center;
-    position: relative;
+    flex-direction: column;
     padding-right: 10px;
     font-family: 'Radio Canada', sans-serif;
 
 }
 
-.content {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    gap: 10px;
-    align-content: center;
-}
 
-.card {
-    display:flexbox;
-    margin-left: 10px;
-    grid-area: "item";
-    border: solid 1px grey;
-    width: 70%;
-    height: max-content;
-    align-content: center;
-}
+
 
 .card-deck {
     display: grid;
-    grid-area: 'card-deck';
+    grid-area: 'main';
     grid-template-columns:
-        "item item item";
+        "item item";
     justify-items: center;
     gap: 10px;
 
 
 }
 
+.card {
+    display:flexbox;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 10px;
+    grid-area: "item";
+    border: solid 1px grey;
+    align-content: center;
+}
+
 
 
 .card-body {
+    display: flex;
+    flex-direction: row;
     border: solid 1px gray;
     line-height: 0.8;
-    width: 100%;
     height: auto;
     text-justify: left;
     justify-content: bottom;
@@ -113,49 +109,16 @@ body {
 
 footer {
     border: solid grey 1px;
-    width: 100%;
+    grid-area: 'foot';
+    min-height: 100%;
+    
 }
 
-.foot {
-    display: grid;
-}
 
 .icon-bar {
+
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     padding: 5%;
 
-}
-
-@media (max-width: 800px) {
-    .card-deck {
-        display: grid;
-        grid-area: 'card-deck';
-        grid-template-columns:
-            "item";
-    }
-
-    .card {
-        flex-direction: row;
-        flex: auto;
-    }
-
-    .card-body {
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex: auto;
-    }
-
-    .img {
-        height: 8rem;
-        width: auto;
-        margin-left: 15%;
-    }
-
-    .content {
-        display: grid;
-        grid-template-columns: max-content;
-        align-content: center;
-        margin-left: 15%;
-    }
 }
