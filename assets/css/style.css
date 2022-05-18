@@ -13,7 +13,8 @@ nav {
 main {
     grid-area: main;
     background-color: #CAD2C5;
-    display: grid;
+    display: flex;
+    justify-content: right;
 }
 
 footer {
@@ -25,13 +26,13 @@ footer {
 
 .grid-container {
     display: grid;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     grid-template-areas:
         "header header"
         "nav main"
         "footer footer";
-    grid-template-rows: 5vw 70vw 10vh;
+    grid-template-rows: 1fr 7fr 2fr;
     grid-template-columns: 15% auto;
 }
 
@@ -75,6 +76,7 @@ a {
 }
 
 .card-body {
+    display: flexbox;
     border: solid 1px gray;
     line-height: 0.8;
     font-family: 'Roboto Mono', monospace;
@@ -90,6 +92,7 @@ a {
 }
 
 .button {
+    display: flex;
     color: aliceblue;
     height: auto;
     width: 200px;
@@ -113,3 +116,80 @@ a {
     padding-top: 30px;
     background-color: #52796F;
 }
+
+@media (max-width: 600px) {
+
+    .grid-container {
+        display: grid;
+        /* width: 100%;
+        height: 100%; */
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-columns: 1fr 3fr;
+        background-color: #CAD2C5;
+    }
+    .cards {
+        margin-left: 30%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: inherit;
+    
+    }
+
+    .img {
+        border-radius: 4px;
+        height: 20vh;
+        width: 10vh;
+        margin: 2vh;
+        image-rendering: crisp-edges;
+    }
+
+    .card-body {
+        display: flexbox;
+        border: solid 1px gray;
+        line-height: 0.8;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 8px;
+        height: fit-content;
+    }
+
+    .button {
+        justify-self: center;
+        display: flex;
+        color: aliceblue;
+        height: auto;
+        width: 95px;
+        border: solid;
+        background-color: #2F3E46;
+        padding: 5% 5% 5% 5%;
+        font-size: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .card {
+        font-family: 'Roboto Mono', monospace;
+        border: solid 1px grey;
+        height: fit-content;
+        width: 100px;
+    
+    }
+
+    .icon-bar {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        color: #2F3E46;
+        justify-content: space-evenly;
+        padding-top: 30px;
+        background-color: #52796F;
+        flex-shrink: 2;
+        font-size: 1px; 
+
+    }
+  }
