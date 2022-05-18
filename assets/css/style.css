@@ -1,124 +1,115 @@
-a {
-    text-decoration: none;
-    color: firebrick;
+header {
+    grid-area: header;
+    background-color: #52796F;
+    text-align: center;
+    color: #2F3E46;
 }
 
-body {
-    background-color: azure;
+nav {
+    grid-area: nav;
+    background-color: #84A98C;
+}
+
+main {
+    grid-area: main;
+    background-color: #CAD2C5;
     display: grid;
 }
+
+footer {
+    grid-area: footer;
+    background-color: #52796F;
+}
+
+
 
 .grid-container {
     display: grid;
-    grid-template-areas: 
-    "head head"
-    "nav  main"
-    "foot foot";
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 15% 70% 15%;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    grid-template-rows: 5vw 70vw 10vh;
+    grid-template-columns: 15% auto;
 }
 
-.head {
-    grid-area: 'head';
-    text-align: center;
-    border: solid 1px black;
+.menu {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: #2F3E46;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #2F3E46;
 }
 
 .top-text {
     font-family: 'Koulen';
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: 2F3E46;
     list-style-type: none;
     cursor: pointer;
 }
 
-
-.item {
-    width: max-content;
-
-}
-
-.sidebar {
-    display: flex;
-    grid-area: 'nav';
-    border: solid 1px black;
-    align-items: center;
-    flex-direction: column;
-    padding-right: 10px;
-    font-family: 'Radio Canada', sans-serif;
-
-}
-
-
-
-
-.card-deck {
+.cards {
+    padding-top: 20px;
     display: grid;
-    grid-area: 'main';
-    grid-template-columns:
-        "item item";
-    justify-items: center;
-    gap: 10px;
-
+    grid-template-columns: 20% 20% 20%;
+    row-gap: 5px;
+    justify-content: space-evenly;
 
 }
 
 .card {
-    display:flexbox;
     font-family: 'Roboto Mono', monospace;
-    margin-left: 10px;
-    grid-area: "item";
     border: solid 1px grey;
-    align-content: center;
+    height: fit-content;
+    width: 200px;
+
 }
 
-
-
 .card-body {
-    display: flex;
-    flex-direction: row;
     border: solid 1px gray;
     line-height: 0.8;
-    height: auto;
-    text-justify: left;
-    justify-content: bottom;
-    font-size: 20px;
     font-family: 'Roboto Mono', monospace;
+    height: fit-content;
 }
 
 .img {
     border-radius: 4px;
-    height: 250px;
-    width: 150px;
-    margin-left: 15%;
+    height: 300px;
+    width: 200px;
+    margin: 2px;
     image-rendering: crisp-edges;
 }
 
 .button {
     color: aliceblue;
-    display: block;
-    width: auto;
+    height: auto;
+    width: 200px;
     border: solid;
-    background-color: blue;
+    background-color: #2F3E46;
     padding: 5% 5% 5% 5%;
-    font-size: 16px;
+    font-size: 10px;
     cursor: pointer;
     text-align: center;
 }
 
-footer {
-    border: solid grey 1px;
-    grid-area: 'foot';
-    min-height: 100%;
-    
-}
 
 
 .icon-bar {
-
+    width: 100;
+    text-align: center;
     display: flex;
     flex-direction: row;
-    padding: 5%;
-
+    color: #2F3E46;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    background-color: #52796F;
 }
